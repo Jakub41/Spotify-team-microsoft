@@ -58,8 +58,8 @@ const artistInfo = showArtistInfo => {
     .then(response => response.json())
     .then(artist => {
       let artistInfo = `<h1>${artist.name}</h1>
-                                <img src="${artist.picture_big}"> 
-                                <a href="${artist.link}" target="_blank">Link</a>`;
+                        <img src="${artist.picture_big}"> 
+                        <a href="${artist.link}" target="_blank">Link</a>`;
       let artistSelector = document.querySelector(".header");
       artistSelector.innerHTML = artistInfo;
     })
