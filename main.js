@@ -29,7 +29,7 @@ const showAllTracks = listALLTracks => {
                           <th>Duration</th>
                           <th>Album ART</th>
                       </tr>
-                  </thead>`;
+                  </thead><tbody>`;
   // We gonna to loop our data and generate our table
   // The API we use has a bit of nesting inside the JSON OBJ
   // From API we have data [{ ... }]
@@ -37,7 +37,7 @@ const showAllTracks = listALLTracks => {
     // Template literal to create our HTML schema where to put our data
     // Created for how many data long we have from API == 300
     // Use literal template to access the right data like data.title or data.album.tile
-    out += `<tbody>
+    out += `
               <tr>
                   <td>${track.title}</td>
                   <td>${track.album.title}</td>
@@ -46,10 +46,10 @@ const showAllTracks = listALLTracks => {
                       <img src="${track.album.cover_small}" alt="...">
                   </td>
                </tr>
-          </tbody>`;
+         `;
   });
 
-  out += `</table>`;
+  out += ` </tbody></table>`;
 
   // We are selecting where we want to show the table
   let showResult = document.querySelector("#showResults");

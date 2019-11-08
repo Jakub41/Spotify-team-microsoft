@@ -57,6 +57,11 @@ body {
   }
 }
 
+table {
+    color: black;
+    text-align: left;
+}
+
 /* Card image  */
 .card-img-top {
   width: 100%;
